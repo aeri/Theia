@@ -24,7 +24,7 @@
         <COMPID name="Consultar listado de notas" mc="Standard.UseCase" uid="3cc0fdc3-a939-4787-a4a1-4425b335d888"/>
         <COMPID name="Nota" mc="Standard.Class" uid="5fee2410-f019-40d3-8307-2db4398b79f7"/>
         <COMPID name="Almacen" mc="Standard.Class" uid="ff226455-2980-427d-9637-9055d6427a9d"/>
-        <COMPID name="Persona" mc="Standard.Class" uid="b9a67733-469b-470c-be2f-caef0f413800"/>
+        <COMPID name="Categoría" mc="Standard.Class" uid="06d77f7f-2109-4190-8700-06dff0a75506"/>
       </COMP>
       <COMP relation="Product">
         <COMPID name="aplicacion_notas Use Case diagram" mc="Standard.UseCaseDiagram" uid="4a1519ad-6865-408b-a291-e74ca53ee7de"/>
