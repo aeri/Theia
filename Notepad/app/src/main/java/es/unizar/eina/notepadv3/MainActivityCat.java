@@ -94,8 +94,8 @@ public class MainActivityCat extends AppCompatActivity {
     public void onCreateContextMenu(ContextMenu menu, View v,
                                     ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
-        menu.add(Menu.NONE, DELETE_ID, Menu.NONE, R.string.menu_delete);
-        menu.add(Menu.NONE, EDIT_ID, Menu.NONE, R.string.menu_edit);
+        menu.add(Menu.NONE, DELETE_ID, Menu.NONE, R.string.menu_deletec);
+        menu.add(Menu.NONE, EDIT_ID, Menu.NONE, R.string.menu_editc);
 
     }
 

@@ -5,6 +5,8 @@
     <string name="menu_insert">Add Item</string>
     <string name="menu_delete">Delete Note</string>
     <string name="menu_edit">Edit Note</string>
+    <string name="menu_deletec">Delete Category</string>
+    <string name="menu_editc">Edit Category</string>
     <string name="menu_email">Send Email</string>
     <string name="menu_sms">Send SMS</string>
     <string name="title">Title</string>
