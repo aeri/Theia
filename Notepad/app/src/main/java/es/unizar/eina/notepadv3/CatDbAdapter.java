@@ -34,31 +34,30 @@ public class CatDbAdapter {
             "create table categories (_id integer primary key autoincrement, "
                     + "title text not null);";
 
+    private static final String NULL_CAT =
+            "insert into categories (_id,title) values (0,\"NO CATEGORY\")";
     private static final String DATABASE_NAME = "dato";
     private static final String DATABASE_TABLE = "categories";
     private static final int DATABASE_VERSION = 2;
 
     private final Context mCtx;
 
-    private static class DatabaseHelper extends SQLiteOpenHelper {
+    /**
+     * Return a Cursor over the list of all notes in the database
+     *
+     * @return Cursor over all notes
+     */
+    public Cursor fetchAllCategories(boolean all) {
 
-        DatabaseHelper(Context context) {
-            super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        if (all) {
+            return mDb.query(DATABASE_TABLE, new String[]{KEY_ROWID, KEY_TITLE},
+                    null, null, null, null, KEY_ROWID);
+        } else {
+            return mDb.query(DATABASE_TABLE, new String[]{KEY_ROWID, KEY_TITLE},
+                    KEY_ROWID + ">0", null, null, null, KEY_ROWID);
         }
 
-        @Override
-        public void onCreate(SQLiteDatabase db) {
 
-            db.execSQL(DATABASE_CREATE);
-        }
-
-        @Override
-        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-            Log.w(TAG, "Upgrading database from version " + oldVersion + " to "
-                    + newVersion + ", which will destroy all old data");
-            db.execSQL("DROP TABLE IF EXISTS categories");
-            onCreate(db);
-        }
     }
 
     /**
@@ -97,7 +96,6 @@ public class CatDbAdapter {
      * a -1 to indicate failure.
      *
      * @param title the title of the note
-     * @param body the body of the note
      * @return rowId or -1 if failed
      */
     public long createCategory(String title) {
@@ -118,15 +116,26 @@ public class CatDbAdapter {
         return mDb.delete(DATABASE_TABLE, KEY_ROWID + "=" + rowId, null) > 0;
     }
 
-    /**
-     * Return a Cursor over the list of all notes in the database
-     *
-     * @return Cursor over all notes
-     */
-    public Cursor fetchAllCategories() {
+    private static class DatabaseHelper extends SQLiteOpenHelper {
 
-        return mDb.query(DATABASE_TABLE, new String[] {KEY_ROWID, KEY_TITLE},
-                null, null, null, null, KEY_TITLE);
+        DatabaseHelper(Context context) {
+            super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        }
+
+        @Override
+        public void onCreate(SQLiteDatabase db) {
+
+            db.execSQL(DATABASE_CREATE);
+            db.execSQL(NULL_CAT);
+        }
+
+        @Override
+        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+            Log.w(TAG, "Upgrading database from version " + oldVersion + " to "
+                    + newVersion + ", which will destroy all old data");
+            db.execSQL("DROP TABLE IF EXISTS categories");
+            onCreate(db);
+        }
     }
 
     /**
@@ -157,7 +166,6 @@ public class CatDbAdapter {
      *
      * @param rowId id of note to update
      * @param title value to set note title to
-     * @param body value to set note body to
      * @return true if the note was successfully updated, false otherwise
      */
     public boolean updateCategory(long rowId, String title) {

@@ -1,9 +1,8 @@
 package es.unizar.eina.notepadv3;
 
-import android.content.Intent;
 import android.database.Cursor;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -51,8 +50,10 @@ public class NoteEdit extends AppCompatActivity implements AdapterView.OnItemSel
             String catt = note.getString(
                     note.getColumnIndexOrThrow(NotesDbAdapter.KEY_CAT));
 
+            if (catt != null) {
+                spinner.setSelection(getIndex(spinner, catt));
+            }
 
-            spinner.setSelection(Integer.parseInt(catt) - 1);
 
         }
         else{
@@ -113,7 +114,7 @@ public class NoteEdit extends AppCompatActivity implements AdapterView.OnItemSel
         });
     }
     private void fillData() {
-        Cursor notesCursor = mDbHelperC.fetchAllCategories();
+        Cursor notesCursor = mDbHelperC.fetchAllCategories(true);
         // Get all of the notes from the database and create the item list
         startManagingCursor(notesCursor);
 
@@ -138,6 +139,18 @@ public class NoteEdit extends AppCompatActivity implements AdapterView.OnItemSel
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
         category = null;
+    }
+
+    private int getIndex(Spinner spinner, String myString) {
+        int rt = 0;
+        for (int i = 0; i < spinner.getCount(); i++) {
+            if (((Cursor) spinner.getItemAtPosition(i))
+                    .getString(0).equalsIgnoreCase(myString)) {
+                rt = i;
+            }
+        }
+
+        return rt;
     }
     /*
     @Override

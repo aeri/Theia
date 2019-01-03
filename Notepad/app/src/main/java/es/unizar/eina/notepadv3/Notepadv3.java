@@ -1,21 +1,23 @@
 package es.unizar.eina.notepadv3;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.database.Cursor;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.Spinner;
+
 import es.unizar.eina.send.SendAbstractionImpl;
 
 
-public class Notepadv3 extends AppCompatActivity {
+public class Notepadv3 extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private static final int ACTIVITY_CREATE=0;
     private static final int ACTIVITY_EDIT=1;
@@ -25,9 +27,12 @@ public class Notepadv3 extends AppCompatActivity {
     private static final int EDIT_ID = Menu.FIRST + 2;
     private static final int SENDE_ID = Menu.FIRST + 3;
     private static final int SENDS_ID = Menu.FIRST + 4;
+    private String catt;
 
     private NotesDbAdapter mDbHelper;
+    private CatDbAdapter mDbHelperC;
     private ListView mList;
+    private Spinner spinner2;
 
 
     /** Called when the activity is first created. */
@@ -39,8 +44,12 @@ public class Notepadv3 extends AppCompatActivity {
 
         mDbHelper = new NotesDbAdapter(this);
         mDbHelper.open();
+        mDbHelperC = new CatDbAdapter(this);
+        mDbHelperC.open();
         mList = (ListView)findViewById(R.id.list);
-        fillData();
+        spinner2 = (Spinner) findViewById(R.id.spinner2);
+        spinner2.setOnItemSelectedListener(this);
+        fillData(true, "0");
 
         registerForContextMenu(mList);
         Button categories = (Button) findViewById(R.id.cat);
@@ -57,16 +66,31 @@ public class Notepadv3 extends AppCompatActivity {
 
     }
 
-    private void fillData() {
-        Cursor notesCursor = mDbHelper.fetchAllNotes();
+    private void fillData(boolean firstTime, String category) {
+        // and an array of the fields we want to bind those fields to (in this case just text1)
+        int[] to = new int[]{R.id.text1};
+
+        if (firstTime) {
+            Cursor categoriesCursor = mDbHelperC.fetchAllCategories(true);
+            startManagingCursor(categoriesCursor);
+            String[] fromC = new String[]{CatDbAdapter.KEY_TITLE};
+
+            SimpleCursorAdapter categories =
+                    new SimpleCursorAdapter(this, R.layout.notes_row, categoriesCursor, fromC, to);
+            spinner2.setAdapter(categories);
+
+        }
+        Cursor notesCursor = null;
+        if (category.equals("0")) {
+            notesCursor = mDbHelper.fetchAllNotes();
+        } else {
+            notesCursor = mDbHelper.fetchNotesbyCat(category);
+        }
+
         // Get all of the notes from the database and create the item list
         startManagingCursor(notesCursor);
-
         // Create an array to specify the fields we want to display in the list (only TITLE)
         String[] from = new String[] { NotesDbAdapter.KEY_TITLE };
-
-        // and an array of the fields we want to bind those fields to (in this case just text1)
-        int[] to = new int[] { R.id.text1 };
 
         // Now create an array adapter and set it to display using our row
         SimpleCursorAdapter notes =
@@ -109,7 +133,7 @@ public class Notepadv3 extends AppCompatActivity {
             case DELETE_ID:
                 AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
                 mDbHelper.deleteNote(info.id);
-                fillData();
+                fillData(false, catt);
                 return true;
             case EDIT_ID:
                 info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
@@ -167,7 +191,19 @@ public class Notepadv3 extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
-        fillData();
+        fillData(false, catt);
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        catt = ((Cursor) parent.getItemAtPosition(position)).getString(0);
+        fillData(false, catt);
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 
 }

@@ -1,12 +1,12 @@
 package es.unizar.eina.notepadv3;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.database.Cursor;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -56,7 +56,7 @@ public class MainActivityCat extends AppCompatActivity {
     }
 
     private void fillData() {
-        Cursor notesCursor = mDbHelper.fetchAllCategories();
+        Cursor notesCursor = mDbHelper.fetchAllCategories(false);
         // Get all of the notes from the database and create the item list
         startManagingCursor(notesCursor);
 

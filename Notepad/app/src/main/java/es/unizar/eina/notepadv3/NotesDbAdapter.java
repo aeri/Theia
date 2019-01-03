@@ -136,6 +136,17 @@ public class NotesDbAdapter {
     }
 
     /**
+     * Return a Cursor over the list of a group of notes by category
+     *
+     * @return Cursor over group of notes
+     */
+    public Cursor fetchNotesbyCat(String category) {
+
+        return mDb.query(DATABASE_TABLE, new String[]{KEY_ROWID, KEY_TITLE,
+                KEY_BODY, KEY_CAT}, KEY_CAT + "==" + category, null, null, null, KEY_TITLE);
+    }
+
+    /**
      * Return a Cursor positioned at the note that matches the given rowId
      *
      * @param rowId id of note to retrieve
