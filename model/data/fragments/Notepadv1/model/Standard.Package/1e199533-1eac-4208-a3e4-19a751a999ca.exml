@@ -16,6 +16,8 @@
       <COMP relation="OwnedElement">
         <COMPID name="ListView" mc="Standard.Class" uid="8f4d43f1-ce8f-4b71-bc68-31852343ce91"/>
         <COMPID name="EditText" mc="Standard.DataType" uid="8b39b22c-4e83-44d6-a7bd-b09f1a4b65e6"/>
+        <COMPID name="Spinner" mc="Standard.Class" uid="e95bd44a-d65f-45a2-be66-af4568e0cd59"/>
+        <COMPID name="AdapterView" mc="Standard.Package" uid="5f6e815d-e514-4ba7-a288-136d6bbdd81f"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>

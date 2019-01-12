@@ -43,6 +43,11 @@
         <COMPID name="Aplicación de SMS" mc="Standard.Artifact" uid="4a0a96ef-6dc4-4562-af77-4729ae09120d"/>
         <COMPID name="Servidor Correo" mc="Standard.Artifact" uid="e1cb6e66-126e-47dd-9aac-34384dcd4cf0"/>
         <COMPID name="Servidor SMS" mc="Standard.Artifact" uid="4ffed3af-ef9b-47a7-8871-262616443684"/>
+        <COMPID name="Añadir categoría" mc="Standard.UseCase" uid="27bc65cb-6c12-41a7-9d28-00ef3297930a"/>
+        <COMPID name="Borrar categoría" mc="Standard.UseCase" uid="2dd24daf-a8a7-42bd-b2d4-cd06052a4980"/>
+        <COMPID name="Borrar nota de categoría" mc="Standard.UseCase" uid="46521e19-834f-4d90-855d-94e2f7924382"/>
+        <COMPID name="Añadir nota a categoría" mc="Standard.UseCase" uid="d0bf688e-b66e-4d22-b662-725120c74fc9"/>
+        <COMPID name="Ordenar notas por categorías" mc="Standard.UseCase" uid="8b5f43b7-404d-41d5-bb0d-98485aa47ead"/>
       </COMP>
       <COMP relation="Product">
         <COMPID name="notepadv1 Class diagram" mc="Standard.ClassDiagram" uid="2cf7e42d-231e-44d3-a06c-07fa12688c2c"/>

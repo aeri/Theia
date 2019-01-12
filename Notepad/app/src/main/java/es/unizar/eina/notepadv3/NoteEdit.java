@@ -25,7 +25,7 @@ public class NoteEdit extends AppCompatActivity implements AdapterView.OnItemSel
     private void saveState() {
         String title = mTitleText.getText().toString();
         String body = mBodyText.getText().toString();
-        String cosa = category;
+        //String cosa = category;
         //String category = spinner.getSelectedItem().toString();
         if (mRowId == null) {
             long id = mDbHelper.createNote(title, body, category);

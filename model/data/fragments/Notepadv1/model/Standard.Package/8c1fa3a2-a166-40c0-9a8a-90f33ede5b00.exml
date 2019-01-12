@@ -18,6 +18,9 @@
         <COMPID name="NotesDbAdapter" mc="Standard.Class" uid="ddbf7d59-d29a-4a31-a649-34dd87c7a9c1"/>
         <COMPID name="NoteEdit" mc="Standard.Class" uid="ad9e60b4-f848-43ed-9095-2844a8b6c78d"/>
         <COMPID name="DatabaseHelper" mc="Standard.Class" uid="2d35d7d5-e2f3-4710-91d7-6074a4163589"/>
+        <COMPID name="MainActivityCat" mc="Standard.Class" uid="a6e33a05-1b52-49f6-8af2-a69fb5d68e59"/>
+        <COMPID name="CatDbAdapter" mc="Standard.Class" uid="6383ea38-5e95-4f72-8205-32fa53910f97"/>
+        <COMPID name="CatEdit" mc="Standard.Class" uid="54327f9a-acd7-4c36-9e25-bbaea5e969c5"/>
       </COMP>
       <COMP relation="DependsOnDependency">
         <OBJECT>

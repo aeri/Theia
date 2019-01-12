@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="AdapterView" version="4">
+  <OBJECT>
+    <ID name="AdapterView" mc="Standard.Package" uid="5f6e815d-e514-4ba7-a288-136d6bbdd81f"/>
+    <PID name="widget" mc="Standard.Package" uid="1e199533-1eac-4208-a3e4-19a751a999ca"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[AdapterView]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="OnItemSelectedListener" mc="Standard.DataType" uid="f21a42c6-f5e8-42d1-bc7f-2c6b4ac28be9"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

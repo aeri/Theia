@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="NotesDbAdapter" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="CatDbAdapter" version="4">
   <OBJECT>
-    <ID name="NotesDbAdapter" mc="Standard.Class" uid="ddbf7d59-d29a-4a31-a649-34dd87c7a9c1"/>
+    <ID name="CatDbAdapter" mc="Standard.Class" uid="6383ea38-5e95-4f72-8205-32fa53910f97"/>
     <PID name="notepadv3" mc="Standard.Package" uid="8c1fa3a2-a166-40c0-9a8a-90f33ede5b00"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
@@ -11,13 +11,13 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[NotesDbAdapter]]></ATT>
+      <ATT name="Name"><![CDATA[CatDbAdapter]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedOperation">
         <OBJECT>
-          <ID name="open" mc="Standard.Operation" uid="77283f21-2ed6-42f2-a6df-c79782834bd4"/>
+          <ID name="open" mc="Standard.Operation" uid="dde3a701-8343-40ac-839e-2a689868a01b"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -31,7 +31,7 @@
           <DEPENDENCIES>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="p1" mc="Standard.Parameter" uid="5a5491ea-5b36-435e-a2cb-90633a5def76"/>
+                <ID name="p1" mc="Standard.Parameter" uid="72346837-485e-40cf-8631-8cc071bea09a"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -48,7 +48,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="NotesDbAdapter" mc="Standard.Class" uid="ddbf7d59-d29a-4a31-a649-34dd87c7a9c1"/>
+                    <ID name="CatDbAdapter" mc="Standard.Class" uid="6383ea38-5e95-4f72-8205-32fa53910f97"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -56,7 +56,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="close" mc="Standard.Operation" uid="30264a41-25a5-4617-9e86-50f24c36299f"/>
+          <ID name="close" mc="Standard.Operation" uid="cf3a3a60-5248-4c23-a835-91ea6882fa38"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -70,7 +70,7 @@
           <DEPENDENCIES></DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="createNote" mc="Standard.Operation" uid="a0723ead-9197-4f03-ac7d-7bb8d1c27d91"/>
+          <ID name="createCategory" mc="Standard.Operation" uid="6cb5bbad-f4af-4cc7-be65-77daaf477674"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -78,13 +78,13 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[createNote]]></ATT>
+            <ATT name="Name"><![CDATA[createCategory]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="title" mc="Standard.Parameter" uid="8183e8c7-6ff4-4693-b90a-e73b71835af4"/>
+                <ID name="title" mc="Standard.Parameter" uid="6bf10477-f067-470d-8734-ea0e0f4e8f47"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -105,32 +105,10 @@
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
-              <OBJECT>
-                <ID name="body" mc="Standard.Parameter" uid="9931d6f8-d473-4c00-8940-1fc71ef63200"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[body]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
             </COMP>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="p3" mc="Standard.Parameter" uid="eaf88762-473c-4eaf-8d9c-a87bb4bf7690"/>
+                <ID name="p3" mc="Standard.Parameter" uid="04fe3681-fa55-4abf-9c3c-80daca997242"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -154,7 +132,7 @@
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="449245b2-47b1-4e5a-906b-053fdd0f6acd"/>
+                <ID name="" mc="Infrastructure.Note" uid="1cd6e78c-4050-4dc9-9291-6cd74e6c1719"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -171,7 +149,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="fetchAllNotes" mc="Standard.Operation" uid="f4ffde1d-530a-4133-a0ce-93ac79789280"/>
+          <ID name="fetchAllCategories" mc="Standard.Operation" uid="a116c072-c014-41e1-8a54-0c4c2ec5abe2"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -179,13 +157,13 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[fetchAllNotes]]></ATT>
+            <ATT name="Name"><![CDATA[fetchAllCategories]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="p1" mc="Standard.Parameter" uid="db73236c-1823-4234-94e0-164339cddea0"/>
+                <ID name="p1" mc="Standard.Parameter" uid="986fb3a9-f39e-4bff-87ea-db9395c81ecd"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -210,7 +188,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="fetchNote" mc="Standard.Operation" uid="18efcb3f-1cc8-4f7c-b845-03f46ae4d0f1"/>
+          <ID name="fetchCategory" mc="Standard.Operation" uid="584b19fb-d60e-4ca8-b951-6b5c33ab3558"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -218,13 +196,13 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[fetchNote]]></ATT>
+            <ATT name="Name"><![CDATA[fetchCategory]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="rowId" mc="Standard.Parameter" uid="16ba060d-dc1e-4132-b09b-23e7a2124cc2"/>
+                <ID name="rowId" mc="Standard.Parameter" uid="f59177d6-f84e-481a-8258-65c3960c5e87"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -248,7 +226,7 @@
             </COMP>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="p2" mc="Standard.Parameter" uid="bd2cfad9-9070-4d25-b0ef-0f683d259c10"/>
+                <ID name="p2" mc="Standard.Parameter" uid="714c569f-46e7-4589-b523-d295d990c7c6"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -273,7 +251,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="updateNote" mc="Standard.Operation" uid="639c1fda-b7fd-443e-84eb-2d9e25559fbd"/>
+          <ID name="updateCategory" mc="Standard.Operation" uid="28777701-04ab-424c-9383-7ccb31a8ad28"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -281,13 +259,13 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[updateNote]]></ATT>
+            <ATT name="Name"><![CDATA[updateCategory]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="rowId" mc="Standard.Parameter" uid="dc3c5be0-ee08-44f8-8bb8-537d25952973"/>
+                <ID name="rowId" mc="Standard.Parameter" uid="8b5a516b-fe3e-4c1e-9a52-69015b61a2dc"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -309,29 +287,7 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="body" mc="Standard.Parameter" uid="7477eb4a-3799-4ab9-b499-93caa47c3239"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[body]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="title" mc="Standard.Parameter" uid="98686d69-dfed-4421-b768-b5fb9205bcea"/>
+                <ID name="title" mc="Standard.Parameter" uid="4e57bcd9-f95c-4118-8624-116b51929476"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -355,7 +311,7 @@
             </COMP>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="p4" mc="Standard.Parameter" uid="b44a130e-6bd1-412c-8cff-cf06e2572229"/>
+                <ID name="p4" mc="Standard.Parameter" uid="c4265af3-2639-49ca-9bac-af3775315362"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -379,7 +335,7 @@
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="2493f221-cb64-4178-8bee-83a96112c6d2"/>
+                <ID name="" mc="Infrastructure.Note" uid="ac422684-b4f5-41b4-8912-6471d9ece3eb"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -396,7 +352,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="deleteNote" mc="Standard.Operation" uid="9168b2b2-2abb-466c-aacf-709d0630887e"/>
+          <ID name="deleteCategory" mc="Standard.Operation" uid="56e9914d-fd4a-45e8-8cdc-28925a379aa1"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -404,13 +360,13 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[deleteNote]]></ATT>
+            <ATT name="Name"><![CDATA[deleteCategory]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="rowId" mc="Standard.Parameter" uid="463fbcd7-eb86-4894-bb39-894ced89549f"/>
+                <ID name="rowId" mc="Standard.Parameter" uid="f3ee6897-fffa-4499-96d2-3c17509887ce"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -434,7 +390,7 @@
             </COMP>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="p2" mc="Standard.Parameter" uid="225ab863-d1d4-4e32-ae10-c36d1c31428c"/>
+                <ID name="p2" mc="Standard.Parameter" uid="3bed340c-398c-4637-b5ca-49e3fedea347"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -461,7 +417,7 @@
       </COMP>
       <COMP relation="OwnedAttribute">
         <OBJECT>
-          <ID name="KEY_TITLE" mc="Standard.Attribute" uid="1bec8f0e-f647-4fda-8d80-c6739e69b335"/>
+          <ID name="KEY_TITLE" mc="Standard.Attribute" uid="0209ab8e-b87d-442c-b90d-7945274835bb"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -485,31 +441,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="KEY_BODY" mc="Standard.Attribute" uid="057c9a6e-67ea-48b9-89c8-9aaf9fc864fb"/>
-          <ATTRIBUTES>
-            <ATT name="TypeConstraint"></ATT>
-            <ATT name="Value"></ATT>
-            <ATT name="TargetIsClass">false</ATT>
-            <ATT name="Changeable">ReadWrite</ATT>
-            <ATT name="IsDerived">false</ATT>
-            <ATT name="IsOrdered">false</ATT>
-            <ATT name="IsUnique">false</ATT>
-            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[KEY_BODY]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="Type">
-              <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="KEY_ROWID" mc="Standard.Attribute" uid="82f90346-2be5-4f75-9bdd-ee100ec36e86"/>
+          <ID name="KEY_ROWID" mc="Standard.Attribute" uid="e1e8d549-ee31-4c32-affa-2cd50916e485"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -533,7 +465,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="TAG" mc="Standard.Attribute" uid="9b1e1a03-1ab3-4ff7-aaaa-7d6bd4fc55cc"/>
+          <ID name="TAG" mc="Standard.Attribute" uid="ddc0ad09-93b1-4291-8b94-4af315736527"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -557,7 +489,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="DATABASE_CREATE" mc="Standard.Attribute" uid="0a9fb69b-aac1-4477-8a62-59b3925df0be"/>
+          <ID name="DATABASE_CREATE" mc="Standard.Attribute" uid="73699927-1242-4264-a39f-3230e7ce136b"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -581,7 +513,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="DATABASE_NAME" mc="Standard.Attribute" uid="bf13d70f-7705-454b-a4f2-f3bae56bce42"/>
+          <ID name="DATABASE_NAME" mc="Standard.Attribute" uid="1b79398e-17f4-4983-b393-d5a1b72d7ede"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -605,7 +537,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="DATABASE_TABLE" mc="Standard.Attribute" uid="ce6544ea-6d1a-47c4-85c7-2dd06e0fc832"/>
+          <ID name="DATABASE_TABLE" mc="Standard.Attribute" uid="92a40a22-23f1-4180-9a21-24807c655c13"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -629,7 +561,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="DATABASE_VERSION" mc="Standard.Attribute" uid="688b4006-c8e5-4039-be0d-bce767ca5fa2"/>
+          <ID name="DATABASE_VERSION" mc="Standard.Attribute" uid="4117ff09-a462-4f53-afce-c95e29fff593"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -653,7 +585,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="KEY_CAT" mc="Standard.Attribute" uid="fb0d37fb-da4a-4afc-9bd3-8d149b1e793b"/>
+          <ID name="NULL_CAT" mc="Standard.Attribute" uid="36bd72de-dbea-451f-90fb-99bcb839dfec"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -664,10 +596,10 @@
             <ATT name="IsUnique">false</ATT>
             <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
             <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-            <ATT name="Visibility">Public</ATT>
+            <ATT name="Visibility">Private</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[KEY_CAT]]></ATT>
+            <ATT name="Name"><![CDATA[NULL_CAT]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -679,7 +611,7 @@
       </COMP>
       <COMP relation="OwnedEnd">
         <OBJECT>
-          <ID name="mDb" mc="Standard.AssociationEnd" uid="1d631c55-b458-4dcc-82f0-5ad07b9da953"/>
+          <ID name="mDb" mc="Standard.AssociationEnd" uid="33815214-f258-468a-baa2-8fbcc711b98c"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -701,7 +633,7 @@
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="Standard.AssociationEnd" uid="5f4f700a-c1f3-47ab-9dc0-69310cde01ab"/>
+                <ID name="" mc="Standard.AssociationEnd" uid="7cd44cf3-9854-47b6-af58-cf4e7f7af967"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -719,11 +651,11 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="mDb" mc="Standard.AssociationEnd" uid="1d631c55-b458-4dcc-82f0-5ad07b9da953"/>
+                    <COMPID name="mDb" mc="Standard.AssociationEnd" uid="33815214-f258-468a-baa2-8fbcc711b98c"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Standard.Association" uid="d8e59888-55af-4690-8d70-74b9c91dca36"/>
+                      <ID name="" mc="Standard.Association" uid="dd87aa27-0a13-4708-aa2d-24cee358f740"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -735,12 +667,12 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Standard.Association" uid="d8e59888-55af-4690-8d70-74b9c91dca36"/>
+              <COMPID name="" mc="Standard.Association" uid="dd87aa27-0a13-4708-aa2d-24cee358f740"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="mDbHelper" mc="Standard.AssociationEnd" uid="8d4e17fa-cb86-46cd-92e1-660821e61dad"/>
+          <ID name="mDbHelper" mc="Standard.AssociationEnd" uid="ba31aaf2-3d51-4186-bea1-7523f8b2cc70"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -762,7 +694,7 @@
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="Standard.AssociationEnd" uid="3f3df9ef-d87c-4683-9a11-1520817cd4ac"/>
+                <ID name="" mc="Standard.AssociationEnd" uid="3381e526-71d0-4457-a797-ccc0cfbf90c1"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -780,11 +712,11 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="mDbHelper" mc="Standard.AssociationEnd" uid="8d4e17fa-cb86-46cd-92e1-660821e61dad"/>
+                    <COMPID name="mDbHelper" mc="Standard.AssociationEnd" uid="ba31aaf2-3d51-4186-bea1-7523f8b2cc70"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Standard.Association" uid="851da887-12b8-4db4-9c57-700ad6dbac7b"/>
+                      <ID name="" mc="Standard.Association" uid="846e73fa-4fc4-4e72-a997-779587536c6b"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -796,14 +728,14 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Standard.Association" uid="851da887-12b8-4db4-9c57-700ad6dbac7b"/>
+              <COMPID name="" mc="Standard.Association" uid="846e73fa-4fc4-4e72-a997-779587536c6b"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
       <COMP relation="Descriptor">
         <OBJECT>
-          <ID name="" mc="Infrastructure.Note" uid="3baf13ce-224e-4927-ae34-2a00f5dcbfe2"/>
+          <ID name="" mc="Infrastructure.Note" uid="eaa5e198-4785-4b82-b202-43fdcd93807b"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
             <ATT name="MimeType"><![CDATA[text/plain]]></ATT>

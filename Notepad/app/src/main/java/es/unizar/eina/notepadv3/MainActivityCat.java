@@ -84,7 +84,7 @@ public class MainActivityCat extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case INSERT_ID:
-                createNote();
+                createCat();
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -109,19 +109,19 @@ public class MainActivityCat extends AppCompatActivity {
                 return true;
             case EDIT_ID:
                 info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
-                editNote(info.position, info.id);
+                editCat(info.position, info.id);
                 return true;
         }
         return super.onContextItemSelected(item);
     }
 
-    private void createNote() {
+    private void createCat() {
         Intent i = new Intent(this, CatEdit.class);
         startActivityForResult(i, ACTIVITY_CREATE);
     }
 
 
-    protected void editNote(int position, long id) {
+    protected void editCat(int position, long id) {
         Intent i = new Intent(this, CatEdit.class);
         i.putExtra(CatDbAdapter.KEY_ROWID, id);
         startActivityForResult(i, ACTIVITY_EDIT);
