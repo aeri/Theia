@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="view" version="4">
+  <OBJECT>
+    <ID name="view" mc="Standard.Package" uid="331b1f12-901c-48e0-8915-1d6a6b86a1dd"/>
+    <PID name="android" mc="Standard.Package" uid="cab2198c-d29e-45c3-945e-260452508008"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[view]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="MenuItem" mc="Standard.DataType" uid="ba1aed1c-53ad-4e57-b709-4e11c76f7ac3"/>
+        <COMPID name="Menu" mc="Standard.DataType" uid="d0be54c0-98a1-4e35-93be-62877ac248d1"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

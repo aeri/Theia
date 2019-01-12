@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="notepadv3" version="4">
+  <OBJECT>
+    <ID name="notepadv3" mc="Standard.Package" uid="8c1fa3a2-a166-40c0-9a8a-90f33ede5b00"/>
+    <PID name="eina" mc="Standard.Package" uid="781298ec-9798-4874-8ea6-1c6cb05bbff2"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[notepadv3]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Notepadv3" mc="Standard.Class" uid="12aa483c-611a-4c11-8be6-f8c9b7f32c6f"/>
+        <COMPID name="NotesDbAdapter" mc="Standard.Class" uid="ddbf7d59-d29a-4a31-a649-34dd87c7a9c1"/>
+        <COMPID name="NoteEdit" mc="Standard.Class" uid="ad9e60b4-f848-43ed-9095-2844a8b6c78d"/>
+        <COMPID name="DatabaseHelper" mc="Standard.Class" uid="2d35d7d5-e2f3-4710-91d7-6074a4163589"/>
+      </COMP>
+      <COMP relation="DependsOnDependency">
+        <OBJECT>
+          <ID name="" mc="Standard.Usage" uid="1c2f6bb6-e2d8-4329-be63-5e0818ba0ead"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="DependsOn">
+              <ID name="android" mc="Standard.Package" uid="cab2198c-d29e-45c3-945e-260452508008"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

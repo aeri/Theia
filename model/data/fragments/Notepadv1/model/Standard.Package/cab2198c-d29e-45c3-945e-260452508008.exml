@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="android" version="4">
+  <OBJECT>
+    <ID name="android" mc="Standard.Package" uid="cab2198c-d29e-45c3-945e-260452508008"/>
+    <PID name="notepadv3" mc="Standard.Package" uid="2555760d-810d-4473-9272-de162a8756d5"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[android]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="content" mc="Standard.Package" uid="7d28fa3c-95f4-4f87-a44b-c26c8dec362e"/>
+        <COMPID name="support" mc="Standard.Package" uid="f50445dc-9aef-4e5b-bca5-b83e1321e3ef"/>
+        <COMPID name="view" mc="Standard.Package" uid="331b1f12-901c-48e0-8915-1d6a6b86a1dd"/>
+        <COMPID name="database" mc="Standard.Package" uid="4e028219-1c00-4c75-adbb-804c008f2534"/>
+        <COMPID name="widget" mc="Standard.Package" uid="1e199533-1eac-4208-a3e4-19a751a999ca"/>
+        <COMPID name="os" mc="Standard.Package" uid="46b01ad4-b7a7-4759-b2a0-3dc192662f5d"/>
+        <COMPID name="app" mc="Standard.Package" uid="062ac732-7b04-43df-a2c8-3fafa1aabb76"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

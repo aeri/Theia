@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="eina" version="4">
+  <OBJECT>
+    <ID name="eina" mc="Standard.Package" uid="781298ec-9798-4874-8ea6-1c6cb05bbff2"/>
+    <PID name="unizar" mc="Standard.Package" uid="6c7342f2-89eb-4fc6-9044-6233d2af395d"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[eina]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="notepadv3" mc="Standard.Package" uid="8c1fa3a2-a166-40c0-9a8a-90f33ede5b00"/>
+        <COMPID name="send" mc="Standard.Package" uid="bd5d7e38-3f15-49e5-b332-16b1c82a4e05"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

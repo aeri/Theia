@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Notepadv1" version="4">
+  <OBJECT>
+    <ID name="Notepadv1" mc="Standard.Project" uid="5a9d342a-36f9-44a8-bc52-177fd1d1dcbf"/>
+    <ATTRIBUTES>
+      <ATT name="ProjectContext"></ATT>
+      <ATT name="ProjectDescr"></ATT>
+      <ATT name="Name"><![CDATA[Notepadv1]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Model">
+        <COMPID name="notepadv3" mc="Standard.Package" uid="2555760d-810d-4473-9272-de162a8756d5"/>
+      </COMP>
+      <COMP relation="DiagramRoot">
+        <COMPID name="Notepadv1" mc="Infrastructure.DiagramSet" uid="bee298d7-fcd9-4fd7-a763-2d007096ab00"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

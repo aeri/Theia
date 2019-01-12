@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="notepadv3" version="4">
+  <OBJECT>
+    <ID name="notepadv3" mc="Standard.Package" uid="2555760d-810d-4473-9272-de162a8756d5"/>
+    <PID name="Notepadv1" mc="Standard.Project" uid="5a9d342a-36f9-44a8-bc52-177fd1d1dcbf"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[notepadv3]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="inicializar" mc="Standard.Interaction" uid="f06ab1a1-bc82-4010-9961-6b6ed0cfca7e"/>
+        <COMPID name="actualizarNota" mc="Standard.Interaction" uid="2e0491ed-ce9d-4dec-8f76-672c241c4290"/>
+        <COMPID name="borrarNota" mc="Standard.Interaction" uid="5e7af50c-c428-484b-a7b5-b30d8373794c"/>
+        <COMPID name="buscarNota" mc="Standard.Interaction" uid="320e9f35-5b82-4570-ac98-fcd457ff2c62"/>
+        <COMPID name="buscarTodasNotas" mc="Standard.Interaction" uid="470c92f0-1490-451f-9ef3-dcd34bbc2c2e"/>
+        <COMPID name="crearNota" mc="Standard.Interaction" uid="69b5e7ca-5401-43d6-8e10-18d34caa88cd"/>
+        <COMPID name="SendEmail" mc="Standard.Interaction" uid="725dee7a-6b9f-4748-94a5-66921b852001"/>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="es" mc="Standard.Package" uid="e6e13d69-94f1-44a8-be45-752cda8d2559"/>
+        <COMPID name="android" mc="Standard.Package" uid="cab2198c-d29e-45c3-945e-260452508008"/>
+        <COMPID name="Usuario" mc="Standard.Actor" uid="f1d15ddd-da2d-4917-b0a1-3c348fa88d62"/>
+        <COMPID name="application" mc="Standard.Component" uid="cda1b639-9296-46b9-bd16-15614b2e6aa6"/>
+        <COMPID name="database" mc="Standard.Component" uid="156b16c2-22ba-468f-b130-eb698ec8e879"/>
+        <COMPID name="DispositivoAndroid" mc="Standard.Node" uid="76ae73a7-e7b7-421d-bea4-d80261d87c39"/>
+        <COMPID name="app-debug.apk" mc="Standard.Artifact" uid="b11c46f0-69b8-4531-9051-91663f12346a"/>
+        <COMPID name="SQlite" mc="Standard.Artifact" uid="0334e47e-ddbc-46bb-abdf-bc0debf06940"/>
+        <COMPID name="Crear Nota" mc="Standard.UseCase" uid="fce15c4b-a268-4f59-b6c4-db44699f3b80"/>
+        <COMPID name="Modificar nota" mc="Standard.UseCase" uid="59da9d43-9815-4a19-ac8a-c28b389869bb"/>
+        <COMPID name="Eliminar nota" mc="Standard.UseCase" uid="c9d84f53-b68e-4251-8418-e6bb2f235d03"/>
+        <COMPID name="Consultar listado de notas" mc="Standard.UseCase" uid="4b0e2820-0c63-4545-ae41-ad0fda50a5f3"/>
+        <COMPID name="Enviar por correo" mc="Standard.UseCase" uid="3a6bb161-07b8-4d72-9c0c-f1c21c8f28b6"/>
+        <COMPID name="Enviar por SMS" mc="Standard.UseCase" uid="f31ef51d-aab5-47d9-9743-b733f15e8d0b"/>
+        <COMPID name="Servidor de correo saliente" mc="Standard.Node" uid="4b04f722-4b72-4bd7-8193-f7736c1bc102"/>
+        <COMPID name="Proveedor de telefonía" mc="Standard.Node" uid="52845af3-1c91-4da6-9b50-38df055fbcf5"/>
+        <COMPID name="Aplicación de Correo" mc="Standard.Artifact" uid="2840d5cc-d0c8-409a-9b94-2bb97f7e1ce7"/>
+        <COMPID name="Aplicación de SMS" mc="Standard.Artifact" uid="4a0a96ef-6dc4-4562-af77-4729ae09120d"/>
+        <COMPID name="Servidor Correo" mc="Standard.Artifact" uid="e1cb6e66-126e-47dd-9aac-34384dcd4cf0"/>
+        <COMPID name="Servidor SMS" mc="Standard.Artifact" uid="4ffed3af-ef9b-47a7-8871-262616443684"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="notepadv1 Class diagram" mc="Standard.ClassDiagram" uid="2cf7e42d-231e-44d3-a06c-07fa12688c2c"/>
+        <COMPID name="Diagrama de Paquetes" mc="Standard.ClassDiagram" uid="57c1230d-50c2-4740-b30a-c937a540e03c"/>
+        <COMPID name="Diagrama de componentes" mc="Standard.ClassDiagram" uid="ccb9fe47-0330-4665-85fb-dfbc77c01d8a"/>
+        <COMPID name="Diagrama de Despliegue" mc="Standard.DeploymentDiagram" uid="c5ac1250-b0d1-47e0-b477-7d54eabb88e7"/>
+        <COMPID name="Casos de Uso" mc="Standard.UseCaseDiagram" uid="0ebd76a9-b543-4292-9748-c3127dfebcfe"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

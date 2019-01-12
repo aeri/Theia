@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="es" version="4">
+  <OBJECT>
+    <ID name="es" mc="Standard.Package" uid="e6e13d69-94f1-44a8-be45-752cda8d2559"/>
+    <PID name="notepadv3" mc="Standard.Package" uid="2555760d-810d-4473-9272-de162a8756d5"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[es]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="unizar" mc="Standard.Package" uid="6c7342f2-89eb-4fc6-9044-6233d2af395d"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
