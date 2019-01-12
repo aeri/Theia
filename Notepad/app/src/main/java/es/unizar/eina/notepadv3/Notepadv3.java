@@ -27,6 +27,7 @@ public class Notepadv3 extends AppCompatActivity implements AdapterView.OnItemSe
     private static final int EDIT_ID = Menu.FIRST + 2;
     private static final int SENDE_ID = Menu.FIRST + 3;
     private static final int SENDS_ID = Menu.FIRST + 4;
+    private static final int TEST_ID = Menu.FIRST + 5;
     private String catt;
 
     private NotesDbAdapter mDbHelper;
@@ -104,6 +105,7 @@ public class Notepadv3 extends AppCompatActivity implements AdapterView.OnItemSe
     public boolean onCreateOptionsMenu(Menu menu) {
         boolean result = super.onCreateOptionsMenu(menu);
         menu.add(Menu.NONE, INSERT_ID, Menu.NONE, R.string.menu_insert);
+        menu.add(Menu.NONE, TEST_ID, Menu.NONE, R.string.menu_test);
         return result;
     }
 
@@ -113,6 +115,9 @@ public class Notepadv3 extends AppCompatActivity implements AdapterView.OnItemSe
             case INSERT_ID:
                 createNote();
                 return true;
+            case TEST_ID:
+                Test test = new Test();
+                test.iniciarPruebas(mDbHelper);
         }
         return super.onOptionsItemSelected(item);
     }

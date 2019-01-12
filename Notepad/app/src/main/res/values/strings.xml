@@ -13,6 +13,7 @@
     <string name="body">Body</string>
     <string name="confirm">Confirm</string>
     <string name="edit_note">Edit Note</string>
+    <string name="menu_test">Test App</string>
     <string name="edit_category">Edit Category</string>
     <string name="title_activity_note_edit">EditNote</string>
 

@@ -96,29 +96,43 @@ public class NotesDbAdapter {
 
 
     /**
-     * Create a new note using the title and body provided. If the note is
-     * successfully created return the new rowId for that note, otherwise return
-     * a -1 to indicate failure.
+     * Crea una nueva nota a partir del título y texto proporcionados. Si la
+     * nota se crea correctamente, devuelve el nuevo rowId de la nota; en otro
+     * caso, devuelve -1 para indicar el fallo.
      *
-     * @param title the title of the note
-     * @param body the body of the note
-     * @return rowId or -1 if failed
+     * @param title
+     *            el título de la nota;
+     *            title != null y title.length() > 0
+     * @param body
+     *            el texto de la nota;
+     *            body != null
+     * @return rowId de la nueva nota o -1 si no se ha podido crear
      */
-    public long createNote(String title, String body, String category) {
-        ContentValues initialValues = new ContentValues();
-        initialValues.put(KEY_TITLE, title);
-        initialValues.put(KEY_BODY, body);
-        initialValues.put(KEY_CAT, category);
 
-        return mDb.insert(DATABASE_TABLE, null, initialValues);
+    public long createNote(String title, String body, String category) {
+        if (title == null) {
+            return -1;
+        } else if (title.length() == 0) {
+            return -1;
+        } else {
+            ContentValues initialValues = new ContentValues();
+            initialValues.put(KEY_TITLE, title);
+            initialValues.put(KEY_BODY, body);
+            initialValues.put(KEY_CAT, category);
+
+            return mDb.insert(DATABASE_TABLE, null, initialValues);
+        }
     }
 
     /**
-     * Delete the note with the given rowId
+     * Borra la nota cuyo rowId se ha pasado como parámetro
      *
-     * @param rowId id of note to delete
-     * @return true if deleted, false otherwise
+     * @param rowId
+     *            el identificador de la nota que se desea borrar;
+     *            rowId > 0
+     * @return true si y solo si la nota se ha borrado
      */
+
     public boolean deleteNote(long rowId) {
 
         return mDb.delete(DATABASE_TABLE, KEY_ROWID + "=" + rowId, null) > 0;
@@ -168,15 +182,23 @@ public class NotesDbAdapter {
     }
 
     /**
-     * Update the note using the details provided. The note to be updated is
-     * specified using the rowId, and it is altered to use the title and body
-     * values passed in
+     * Actualiza una nota a partir de los valores de los parámetros. La nota que
+     * se actualizará es aquella cuyo rowId coincida con el valor del parámetro.
+     * Su título y texto se modificarán con los valores de title y body,
+     * respectivamente.
      *
-     * @param rowId id of note to update
-     * @param title value to set note title to
-     * @param body value to set note body to
-     * @return true if the note was successfully updated, false otherwise
+     * @param rowId
+     *            el identificador de la nota que se desea borrar;
+     *            rowId > 0
+     * @param title
+     *            el título de la nota;
+     *            title != null y title.length() > 0
+     * @param body
+     *            el texto de la nota;
+     *            body != null
+     * @return true si y solo si la nota se actualizó correctamente
      */
+
     public boolean updateNote(long rowId, String title, String body, String category) {
         ContentValues args = new ContentValues();
         args.put(KEY_TITLE, title);
