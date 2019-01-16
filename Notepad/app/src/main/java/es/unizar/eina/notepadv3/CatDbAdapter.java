@@ -99,10 +99,16 @@ public class CatDbAdapter {
      * @return rowId or -1 if failed
      */
     public long createCategory(String title) {
-        ContentValues initialValues = new ContentValues();
-        initialValues.put(KEY_TITLE, title);
+        if (title != null) {
+            if (title.length() == 0) {
+                return -1;
+            } else {
+                ContentValues initialValues = new ContentValues();
+                initialValues.put(KEY_TITLE, title);
 
-        return mDb.insert(DATABASE_TABLE, null, initialValues);
+                return mDb.insert(DATABASE_TABLE, null, initialValues);
+            }
+        } else return -1;
     }
 
     /**
@@ -112,8 +118,11 @@ public class CatDbAdapter {
      * @return true if deleted, false otherwise
      */
     public boolean deleteCategory(long rowId) {
-
-        return mDb.delete(DATABASE_TABLE, KEY_ROWID + "=" + rowId, null) > 0;
+        if (rowId <= 0) {
+            return false;
+        } else {
+            return mDb.delete(DATABASE_TABLE, KEY_ROWID + "=" + rowId, null) > 0;
+        }
     }
 
     private static class DatabaseHelper extends SQLiteOpenHelper {
@@ -169,9 +178,17 @@ public class CatDbAdapter {
      * @return true if the note was successfully updated, false otherwise
      */
     public boolean updateCategory(long rowId, String title) {
-        ContentValues args = new ContentValues();
-        args.put(KEY_TITLE, title);
-
-        return mDb.update(DATABASE_TABLE, args, KEY_ROWID + "=" + rowId, null) > 0;
+        try {
+            if (rowId <= 0 || title.length() == 0) {
+                return false;
+            } else {
+                ContentValues args = new ContentValues();
+                args.put(KEY_TITLE, title);
+                return mDb.update(DATABASE_TABLE, args, KEY_ROWID + "=" + rowId, null) > 0;
+            }
+        } catch (Throwable error) {
+            Log.e(TAG, "Exception catched", error);
+            return false;
+        }
     }
 }

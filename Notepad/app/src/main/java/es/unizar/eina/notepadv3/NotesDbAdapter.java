@@ -36,7 +36,7 @@ public class NotesDbAdapter {
      */
     private static final String DATABASE_CREATE =
             "create table notes (_id integer primary key autoincrement, "
-                    + "title text not null, body text not null, category text);";
+                    + "title text not null, body text not null, category text not null);";
 
     private static final String DATABASE_NAME = "data";
     private static final String DATABASE_TABLE = "notes";
@@ -200,11 +200,19 @@ public class NotesDbAdapter {
      */
 
     public boolean updateNote(long rowId, String title, String body, String category) {
-        ContentValues args = new ContentValues();
-        args.put(KEY_TITLE, title);
-        args.put(KEY_BODY, body);
-        args.put(KEY_CAT, category);
-
-        return mDb.update(DATABASE_TABLE, args, KEY_ROWID + "=" + rowId, null) > 0;
+        try {
+            if (title.length() == 0) {
+                return false;
+            } else {
+                ContentValues args = new ContentValues();
+                args.put(KEY_TITLE, title);
+                args.put(KEY_BODY, body);
+                args.put(KEY_CAT, category);
+                return mDb.update(DATABASE_TABLE, args, KEY_ROWID + "=" + rowId, null) > 0;
+            }
+        } catch (Throwable error) {
+            Log.e(TAG, "Exception catched", error);
+            return false;
+        }
     }
 }

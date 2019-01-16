@@ -117,7 +117,7 @@ public class Notepadv3 extends AppCompatActivity implements AdapterView.OnItemSe
                 return true;
             case TEST_ID:
                 Test test = new Test();
-                test.iniciarPruebas(mDbHelper);
+                test.iniciarPruebas(mDbHelper, mDbHelperC);
         }
         return super.onOptionsItemSelected(item);
     }
