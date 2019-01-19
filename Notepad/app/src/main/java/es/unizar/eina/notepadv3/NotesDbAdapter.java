@@ -146,7 +146,7 @@ public class NotesDbAdapter {
     public Cursor fetchAllNotes() {
 
         return mDb.query(DATABASE_TABLE, new String[] {KEY_ROWID, KEY_TITLE,
-                KEY_BODY, KEY_CAT}, null, null, null, null, KEY_TITLE);
+                KEY_BODY, KEY_CAT}, null, null, null, null, null);
     }
 
     /**

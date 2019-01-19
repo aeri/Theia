@@ -1,4 +1,2 @@
-#Mon Jan 14 10:40:00 CET 2019
-org.modelio.diagram.editor.OpenedDiagrams2='Casos de Uso' {0ebd76a9-b543-4292-9748-c3127dfebcfe} Standard.UseCaseDiagram
-org.modelio.diagram.editor.OpenedDiagrams1='Diagrama de Paquetes' {57c1230d-50c2-4740-b30a-c937a540e03c} Standard.ClassDiagram
-org.modelio.diagram.editor.OpenedDiagrams0='notepadv1 Class diagram' {2cf7e42d-231e-44d3-a06c-07fa12688c2c} Standard.ClassDiagram
+#Fri Jan 18 11:54:40 CET 2019
+org.modelio.diagram.editor.OpenedDiagrams0='deleteCat' {6834e888-0bc4-4461-9e61-2342d4713e0a} Standard.SequenceDiagram

@@ -29,6 +29,7 @@ public class Notepadv3 extends AppCompatActivity implements AdapterView.OnItemSe
     private static final int SENDS_ID = Menu.FIRST + 4;
     private static final int TEST_ID = Menu.FIRST + 5;
     private String catt;
+    private int POSX = 0;
 
     private NotesDbAdapter mDbHelper;
     private CatDbAdapter mDbHelperC;
@@ -98,6 +99,7 @@ public class Notepadv3 extends AppCompatActivity implements AdapterView.OnItemSe
                 new SimpleCursorAdapter(this, R.layout.notes_row, notesCursor, from, to);
         mList.setAdapter(notes);
         mList.setEmptyView(findViewById(R.id.empty));
+        mList.setSelection(POSX);
     }
 
 
@@ -113,6 +115,7 @@ public class Notepadv3 extends AppCompatActivity implements AdapterView.OnItemSe
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case INSERT_ID:
+                POSX = mList.getCount();
                 createNote();
                 return true;
             case TEST_ID:
@@ -134,6 +137,7 @@ public class Notepadv3 extends AppCompatActivity implements AdapterView.OnItemSe
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
+        POSX = ((AdapterView.AdapterContextMenuInfo) item.getMenuInfo()).position;
         switch(item.getItemId()) {
             case DELETE_ID:
                 AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();

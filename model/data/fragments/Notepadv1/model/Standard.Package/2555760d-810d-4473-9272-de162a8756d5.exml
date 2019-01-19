@@ -18,9 +18,12 @@
         <COMPID name="actualizarNota" mc="Standard.Interaction" uid="2e0491ed-ce9d-4dec-8f76-672c241c4290"/>
         <COMPID name="borrarNota" mc="Standard.Interaction" uid="5e7af50c-c428-484b-a7b5-b30d8373794c"/>
         <COMPID name="buscarNota" mc="Standard.Interaction" uid="320e9f35-5b82-4570-ac98-fcd457ff2c62"/>
-        <COMPID name="buscarTodasNotas" mc="Standard.Interaction" uid="470c92f0-1490-451f-9ef3-dcd34bbc2c2e"/>
+        <COMPID name="buscarNotas" mc="Standard.Interaction" uid="470c92f0-1490-451f-9ef3-dcd34bbc2c2e"/>
         <COMPID name="crearNota" mc="Standard.Interaction" uid="69b5e7ca-5401-43d6-8e10-18d34caa88cd"/>
         <COMPID name="SendEmail" mc="Standard.Interaction" uid="725dee7a-6b9f-4748-94a5-66921b852001"/>
+        <COMPID name="editarCategoría" mc="Standard.Interaction" uid="4e8c163c-4905-49c3-8dec-e8a339e72cf1"/>
+        <COMPID name="crearCategoría" mc="Standard.Interaction" uid="17349197-84b6-4bc4-8e14-9443d6ae9f9c"/>
+        <COMPID name="borrarCat" mc="Standard.Interaction" uid="cd79b7b0-fdee-4b34-b246-ef966a64ac68"/>
       </COMP>
       <COMP relation="OwnedElement">
         <COMPID name="es" mc="Standard.Package" uid="e6e13d69-94f1-44a8-be45-752cda8d2559"/>
