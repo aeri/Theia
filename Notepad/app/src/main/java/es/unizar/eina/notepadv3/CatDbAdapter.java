@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 /**
- * Simple notes database access helper class. Defines the basic CRUD operations
+ * Simple categories database access helper class. Defines the basic CRUD operations
  * for the notepad example, and gives the ability to list all notes as well as
  * retrieve or modify a specific note.
  *
@@ -43,8 +43,8 @@ public class CatDbAdapter {
     private final Context mCtx;
 
     /**
-     * Return a Cursor over the list of all notes in the database
-     *
+     * Return a Cursor over the list of all categories in the database
+     * @param all Include category "NO CATEGORY" in the query
      * @return Cursor over all notes
      */
     public Cursor fetchAllCategories(boolean all) {
@@ -71,7 +71,7 @@ public class CatDbAdapter {
     }
 
     /**
-     * Open the notes database. If it cannot be opened, try to create a new
+     * Open the categories database. If it cannot be opened, try to create a new
      * instance of the database. If it cannot be created, throw an exception to
      * signal the failure
      *
@@ -91,11 +91,11 @@ public class CatDbAdapter {
 
 
     /**
-     * Create a new note using the title and body provided. If the note is
+     * Create a new category using the title provided. If the note is
      * successfully created return the new rowId for that note, otherwise return
      * a -1 to indicate failure.
      *
-     * @param title the title of the note
+     * @param title the title of the category
      * @return rowId or -1 if failed
      */
     public long createCategory(String title) {
@@ -112,9 +112,9 @@ public class CatDbAdapter {
     }
 
     /**
-     * Delete the note with the given rowId
+     * Delete the category with the given rowId
      *
-     * @param rowId id of note to delete
+     * @param rowId id of category to delete
      * @return true if deleted, false otherwise
      */
     public boolean deleteCategory(long rowId) {
@@ -148,9 +148,9 @@ public class CatDbAdapter {
     }
 
     /**
-     * Return a Cursor positioned at the note that matches the given rowId
+     * Return a Cursor positioned at the category that matches the given rowId
      *
-     * @param rowId id of note to retrieve
+     * @param rowId id of category to retrieve
      * @return Cursor positioned to matching note, if found
      * @throws SQLException if note could not be found/retrieved
      */
@@ -169,9 +169,9 @@ public class CatDbAdapter {
     }
 
     /**
-     * Update the note using the details provided. The note to be updated is
-     * specified using the rowId, and it is altered to use the title and body
-     * values passed in
+     * Update the category using the details provided. The category to be updated is
+     * specified using the rowId, and it is altered to use the title
+     * value passed in
      *
      * @param rowId id of note to update
      * @param title value to set note title to

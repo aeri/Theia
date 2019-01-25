@@ -57,7 +57,7 @@ public class MainActivityCat extends AppCompatActivity {
 
     private void fillData() {
         Cursor notesCursor = mDbHelper.fetchAllCategories(false);
-        // Get all of the notes from the database and create the item list
+        // Get all of the categories from the database and create the item list
         startManagingCursor(notesCursor);
 
         // Create an array to specify the fields we want to display in the list (only TITLE)
